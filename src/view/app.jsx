@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { List } from "./list";
 import { Filter } from "./filter";
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
 export function App() {
   const [originalList, setOriginalList] = useState([]);
