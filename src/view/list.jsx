@@ -1,8 +1,9 @@
 import { Card } from "./card";
+import styled from "styled-components";
 
 export function List({ listData }) {
   return (
-    <div className="cards-list">
+    <Div className="cards-list">
       <ul>
         {listData.map((item) => (
           <li className="card-item" key={item.id}>
@@ -10,9 +11,30 @@ export function List({ listData }) {
           </li>
         ))}
       </ul>
-    </div>
+    </Div>
   );
 }
+
+const Div = styled.div`
+
+  background: oldlace;
+  height: 77vh;
+  min-width: 37rem;
+  /*border: #0000b9 solid 3px;*/
+  border-radius: 0.4rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  box-shadow: 0 0.2rem 0.8rem DimGrey;
+
+&:nth-child(even) {
+  background: honeydew;
+}
+&:nth-child(odd) {
+  background: white;
+}
+`
+
+
 
 
 

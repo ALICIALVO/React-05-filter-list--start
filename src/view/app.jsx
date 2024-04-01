@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { List } from "./list";
 import { Filter } from "./filter";
+import styled, {keyframes} from "styled-components";
 
 export function App() {
   const [originalList, setOriginalList] = useState([]);
@@ -27,7 +28,7 @@ export function App() {
   }, []);
 
   return (
-    <div className="app">
+    <Div className="app">
       <div className="header">
         <h1 className="headline white-text">Show me the list!</h1>
       </div>
@@ -41,6 +42,19 @@ export function App() {
           <List listData={robotsList} />
         </>
       )}
-    </div>
+    </Div>
   );
 }
+
+
+const Div = styled.div`
+
+  background: Cornsilk;
+  padding: 8.5rem 1.5rem 1.5rem;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.4rem 1.5rem DimGrey;
+  position: relative;
+  margin-top: 7rem;
+`;
