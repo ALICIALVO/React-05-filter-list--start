@@ -1,12 +1,12 @@
 import { Card } from "./card";
 import styled from "styled-components";
 
-export function List({ listData }) {
+export function List({ listData, onUserClick }) {
   return (
     <Div className="cards-list">
       <ul>
         {listData.map((item) => (
-          <li className="card-item" key={item.id}>
+          <li className="card-item" key={item.id}  onClick={() => onUserClick(item)}>
             <Card {...item} />
           </li>
         ))}

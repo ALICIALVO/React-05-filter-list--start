@@ -3,7 +3,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { reset } from 'styled-reset';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   ${reset}
   
 
@@ -75,6 +75,9 @@ export const GlobalStyle = createGlobalStyle`
   justify-content: space-around;
   align-items: center;
 } */
+
+
+// .load-label used in h1 App.jsx:
 /* .load-label{
   display: flex;
   justify-content: center;

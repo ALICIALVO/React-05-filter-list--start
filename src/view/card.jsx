@@ -1,14 +1,15 @@
-import { Thumb } from "./thumb";
 import styled from "styled-components";
+import { Thumb } from "./thumb";
+
 
 export function Card({ country, description, first_name, avatar }) {
   return (
     <Div>
-      <Thumb image_url={avatar} />
+      <Thumb image_url={avatar} size="small" />
       <div className="texts-box">
-        <H1 className="card-title paragraph">
+        <h1 className="card-title paragraph">
           {first_name} from {country}
-        </H1>
+        </h1>
         <p className="card-msg">{description}</p>
       </div>
     </Div>
@@ -17,11 +18,13 @@ export function Card({ country, description, first_name, avatar }) {
 
 const Div = styled.div`
 /* .card: */
-
+  /* margin: 1rem 3rem; */
   padding: 2rem 2.8rem;
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  /* flex-wrap: wrap; */
 
 &:hover {
   background: paleturquoise;
@@ -38,37 +41,44 @@ const Div = styled.div`
 &:active img {
   box-shadow: 0 0.4rem 1.5rem DimGrey;
 }
-&:active h1 {
-  color: white;
+
+h1{
+  text-align: left;
+  font-size: 5rem;
+  color: gray;
 }
+/* &:active h1 {
+  color: white;
+} */
 .texts-box {
   padding-left: 2.8rem;
 }
 p {
-  font-family: "Raleway";
-  font-size: 1.4rem;
+  font-size: 2.1rem;
+  color: gray;
   max-width: 35rem;
 }
+
 
   
 `;
 
 
-const H1 = styled.h1`
-  &.card-title {
-    font-family: "Expletus Sans";
-    text-align: left;
-    font-size: 2.8rem;
-  } 
+// const H1 = styled.h1`
+//   &.card-title {
+//     font-family: "Expletus Sans";
+//     text-align: left;
+//     font-size: 3rem;
+//   } 
 
-  &.paragraph {
-    font-size: 3.8rem;
-    font-weight: 400;
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    text-align: center;
-    color: slategray;
-  }
-`;
+//   &.paragraph {
+//     font-size: 3.8rem;
+//     font-weight: 400;
+//     font-family: "Yanone Kaffeesatz", sans-serif;
+//     text-align: center;
+//     color: slategray;
+//   }
+// `;
 
 
 
