@@ -36,7 +36,7 @@ export function App() {
     getData().catch(console.log);
   }, []);
 
-  // const handleUserClick = (user) => {
+  // const handleUserClick = (user) => {}
   //   setSelectedUser(user);
   // };
 
