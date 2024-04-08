@@ -2,11 +2,15 @@ import { Card } from "./card";
 import styled from "styled-components";
 
 export function List({ listData, onUserClick }) {
+  
+  function handleUserClick (item) {
+    onUserClick(item);
+  };
   return (
     <Div className="cards-list">
       <ul>
-        {listData.map((item) => (
-          <li className="card-item" key={item.id}  onClick={() => onUserClick(item)}>
+        {listData.map((item, index) => (
+           <li className="card-item" key={item.id} onClick={() => handleUserClick(item)} style={{ backgroundColor: index % 2 === 0 ? 'honeydew' : 'white' }}>
             <Card {...item} />
           </li>
         ))}
@@ -19,19 +23,19 @@ const Div = styled.div`
 
   background: oldlace;
   height: 77vh;
-  min-width: 37rem;
+  width: 90rem;
   /*border: #0000b9 solid 3px;*/
   border-radius: 0.4rem;
   overflow-x: hidden;
   overflow-y: scroll;
   box-shadow: 0 0.2rem 0.8rem DimGrey;
 
-&:nth-child(even) {
+/* &:nth-child(even) {
   background: honeydew;
 }
 &:nth-child(odd) {
   background: white;
-}
+} */
 `
 
 
