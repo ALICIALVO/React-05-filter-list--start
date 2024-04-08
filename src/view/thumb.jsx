@@ -10,13 +10,25 @@ export function Thumb({ image_url }) {
 
 
 const Img = styled.img`
-    height: 12rem;
+ 
+  height: 12rem;
   width: 12rem;
   /*border: #004141 solid 4px;*/
   border-radius: 50%;
-  /*padding: 10px;*/
+  /* padding: 10px; */
   background-color: darksalmon;
   transition: box-shadow 150ms, margin 150ms, padding 150ms;
+  
+
+  
+  &:hover img {
+  box-shadow: 0 0.4rem 1.5rem DimGrey;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+}
+&:active img {
+  box-shadow: 0 0.4rem 1.5rem DimGrey;
+}
 `;
 
 

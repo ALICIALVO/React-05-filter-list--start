@@ -18,13 +18,12 @@ export function Card({ country, description, first_name, avatar }) {
 
 const Div = styled.div`
 /* .card: */
-  /* margin: 1rem 3rem; */
-  padding: 2rem 2.8rem;
+  padding: 2rem 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   font-family: "Yanone Kaffeesatz", sans-serif;
-  /* flex-wrap: wrap; */
+  padding-right: 10rem;
 
 &:hover {
   background: paleturquoise;
@@ -50,13 +49,13 @@ h1{
 /* &:active h1 {
   color: white;
 } */
-.texts-box {
+div {
   padding-left: 2.8rem;
 }
 p {
   font-size: 2.1rem;
   color: gray;
-  max-width: 35rem;
+  max-width: 50rem;
 }
 
 

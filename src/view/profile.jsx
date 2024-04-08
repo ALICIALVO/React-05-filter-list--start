@@ -3,8 +3,8 @@ import { Thumb } from "./thumb";
 
 
 export function Profile({ first_name,last_name, id, country, email, description, avatar }) {
-    // const { first_name,last_name, id, country, email, description, avatar } = user;
-  
+
+
     return (
       <Div>
         <Thumb image_url={avatar} />
@@ -28,53 +28,41 @@ export function Profile({ first_name,last_name, id, country, email, description,
 const Div = styled.div`
 /* .card: */
 
-  padding: 2rem 2.8rem;
+  padding: 2.5rem 2rem;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   flex-direction: column;
   justify-content: space-around;
   font-family: "Yanone Kaffeesatz", sans-serif;
+  padding-top: 4rem;
 
-/* &:hover {
-  background: paleturquoise;
-}  */
-/* &:active {
-  background: skyblue;
-  color: white;
-} */
-/* &:hover img {
-  box-shadow: 0 0.4rem 1.5rem DimGrey;
-  margin-bottom: 3rem;
-  padding-bottom: 1rem;
-} */
-/* &:active img {
-  box-shadow: 0 0.4rem 1.5rem DimGrey;
-} */
-/* &:active h1 {
-  color: white;
-} */
-img {
+  img {
     width: 30rem;
-  height: auto; 
-}
-
-h1 {
+    height: auto; 
+    /* object-fit: cover; 
+    object-position: center; */
+  }
+  
+  h1 {
     text-align: left;
     font-size: 4rem;
     color: #686767;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
+  /* &:active h1 {
+    color: white;
+  } */
 
   hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
 }
-/* .texts-box {
+div {
   padding-left: 2.8rem;
-} */
+}
 
 span{
 
@@ -82,12 +70,11 @@ span{
   white-space: pre-line; 
   font-size: 3.5rem;
   color: purple;
-  padding-bottom: 1rem;
 
 }
 p {
     /* font-family: "Yanone Kaffeesatz", sans-serif; */
-  font-size: 2rem;
+  font-size: 2.4rem;
   max-width: 35rem;
   color: #9f9c9c;
   padding-top: 1rem;
