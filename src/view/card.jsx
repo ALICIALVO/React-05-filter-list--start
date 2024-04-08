@@ -5,7 +5,7 @@ import { Thumb } from "./thumb";
 export function Card({ country, description, first_name, avatar }) {
   return (
     <Div>
-      <Thumb image_url={avatar} size="small" />
+      <Thumb image_url={avatar} />
       <div className="texts-box">
         <h1 className="card-title paragraph">
           {first_name} from {country}
