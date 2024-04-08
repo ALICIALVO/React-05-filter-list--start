@@ -5,6 +5,8 @@ import { Profile } from "./profile";
 
 import styled from "styled-components";
 
+const apiUrl = import.meta.env.VITE_API_URL;
+
 export function App() {
   const [originalList, setOriginalList] = useState([]);
   const [robotsList, setRobotsList] = useState([]);
@@ -16,7 +18,7 @@ export function App() {
   useEffect(() => {
     async function getData() {
       try {
-        const data_url = "https://api.npoint.io/86690d80ff3d455133f0";
+        const data_url = apiUrl;
         const response = await fetch(data_url);
         const data = await response.json();
         setRobotsList(data);
@@ -34,9 +36,9 @@ export function App() {
     getData().catch(console.log);
   }, []);
 
-  const handleUserClick = (user) => {
-    setSelectedUser(user);
-  };
+  // const handleUserClick = (user) => {
+  //   setSelectedUser(user);
+  // };
 
 
   return (
@@ -51,8 +53,8 @@ export function App() {
       ) : (
         <>
         <Filter listData={originalList} onFilter={setRobotsList}/>
-          <List listData={robotsList} onUserClick={handleUserClick} />
-          {selectedUser && <Profile {...selectedUser} />}
+          <List listData={robotsList} onUserClick={setSelectedUser} />
+           <Profile {...selectedUser} />
           {/* profile instanse: */}
         </>
       )}
@@ -64,7 +66,7 @@ export function App() {
 const Div = styled.div`
 
   background: Cornsilk;
-  padding: 8.5rem 2rem 2rem 4rem;
+  padding: 8.5rem 2rem 2rem 2rem;
   border-radius: 0.4rem;
   display: flex;
   flex-direction: row-reverse;
